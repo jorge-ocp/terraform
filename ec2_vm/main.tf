@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   region  = "us-west-2"
-}S
+}
 
 resource "aws_instance" "app_server" {
   ami           = "ami-830c94e3"
