@@ -17,9 +17,9 @@ variable "instance_count" {
 }
 
 variable "instance_type" {
-    description = "Instance type"
+    description = "AWS EC2 instance type"
     type = string
-    default = "t2.micro"
+    
   
 }
 
@@ -71,5 +71,15 @@ variable "private_subnet_cidr_blocks" {
     "10.0.107.0/24",
     "10.0.108.0/24",
    ]
+  
+}
+
+variable "resource_tags" {
+  description = "Tags to set for all resources"
+  type        = map(string)
+  default = {
+    "project" = "project-alpha"
+    "environment" = "dev"
+  }
   
 }
